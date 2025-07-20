@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb+srv://karthikeyachamarthy:<SGWdwjyEFf28R14Q>@cluster0.d6cyvy6.mongodb.net/<your-db-name>?retryWrites=true&w=majority", {
+  .connect("mongodb+srv://karthikeyachamarthy:SGWdwjyEFf28R14Q@cluster0.d6cyvy6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
