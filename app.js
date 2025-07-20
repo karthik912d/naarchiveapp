@@ -11,12 +11,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb+srv://karthikeyachamarthy:SGWdwjyEFf28R14Q@cluster0.d6cyvy6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
+  .connect("mongodb+srv://karthikeyachamarthy:SGWdwjyEFf28R14Q@cluster0.d6cyvy6.mongodb.net/journalDB?retryWrites=true&w=majority&appName=Cluster0")
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection failed:", err));
+
 
 // Mongoose Schema and Model
 const journalSchema = new mongoose.Schema({
