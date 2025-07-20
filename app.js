@@ -11,7 +11,10 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://localhost:27017/journalDB")
+  .connect(process.env.MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.error("❌ MongoDB connection failed:", err));
 
